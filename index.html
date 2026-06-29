@@ -585,15 +585,15 @@ footer p{font-size:12.5px;color:#9B958A;line-height:1.7;}
       </div>
     </div>
     <div class="reveal">
-      <div id="enquiryForm">
+      <form id="enquiryForm" onsubmit="return submitEnquiry(event)">
         <div class="form-grid">
-          <div class="form-field"><label>Your Name *</label><input type="text" id="fname" placeholder="Full name"/></div>
-          <div class="form-field"><label>Mobile Number *</label><input type="tel" id="fmobile" placeholder="+91 XXXXX XXXXX"/></div>
-          <div class="form-field"><label>Email</label><input type="email" id="femail" placeholder="your@email.com"/></div>
-          <div class="form-field"><label>City *</label><input type="text" id="fcity" placeholder="Delhi, Gurgaon, Noida..."/></div>
+          <div class="form-field"><label>Your Name *</label><input type="text" id="fname" name="name" placeholder="Full name"/></div>
+          <div class="form-field"><label>Mobile Number *</label><input type="tel" id="fmobile" name="mobile" placeholder="+91 XXXXX XXXXX"/></div>
+          <div class="form-field"><label>Email</label><input type="email" id="femail" name="email" placeholder="your@email.com"/></div>
+          <div class="form-field"><label>City *</label><input type="text" id="fcity" name="city" placeholder="Delhi, Gurgaon, Noida..."/></div>
           <div class="form-field">
             <label>Service Required *</label>
-            <select id="fservice">
+            <select id="fservice" name="service">
               <option value="">Select service</option>
               <option>Interior Fit-Out / Civil Works</option>
               <option>Interior Grade Painting</option>
@@ -610,7 +610,7 @@ footer p{font-size:12.5px;color:#9B958A;line-height:1.7;}
           </div>
           <div class="form-field">
             <label>Property Type</label>
-            <select id="fspace">
+            <select id="fspace" name="property_type">
               <option value="">Select</option>
               <option>Residential</option>
               <option>Commercial — Office</option>
@@ -620,10 +620,10 @@ footer p{font-size:12.5px;color:#9B958A;line-height:1.7;}
               <option>Other</option>
             </select>
           </div>
-          <div class="form-field full"><label>Describe Your Requirement</label><textarea id="fvision" placeholder="Area (sq.ft.), current condition, timeline, or anything else we should know..."></textarea></div>
+          <div class="form-field full"><label>Describe Your Requirement</label><textarea id="fvision" name="requirement" placeholder="Area (sq.ft.), current condition, timeline, or anything else we should know..."></textarea></div>
         </div>
-        <button class="submit-btn" onclick="submitEnquiry()">Book Site Inspection — ₹1,000</button>
-      </div>
+        <button class="submit-btn" type="submit" id="submitBtn">Book Site Inspection — ₹1,000</button>
+      </form>
       <div class="form-success" id="formSuccess">
         <h3>Request Received</h3>
         <p style="color:var(--grey);">Our team will contact you shortly to schedule your site inspection and share payment details for the ₹1,000 inspection fee.</p>
@@ -699,17 +699,46 @@ const countObs = new IntersectionObserver((entries)=>{
 },{threshold:0.4});
 countEls.forEach(el=>countObs.observe(el));
 
-function submitEnquiry(){
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mvzjqjza';
+
+function submitEnquiry(event){
+  event.preventDefault();
   const n = document.getElementById('fname').value.trim();
   const m = document.getElementById('fmobile').value.trim();
   const c = document.getElementById('fcity').value.trim();
   const s = document.getElementById('fservice').value;
   if(!n || !m || !c || !s){
     alert('Please fill in all required fields marked with *.');
-    return;
+    return false;
   }
-  document.getElementById('enquiryForm').style.display = 'none';
-  document.getElementById('formSuccess').classList.add('show');
+  const form = document.getElementById('enquiryForm');
+  const btn = document.getElementById('submitBtn');
+  const originalText = btn.textContent;
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  fetch(FORMSPREE_ENDPOINT, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(response => {
+    if(response.ok){
+      form.style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+    } else {
+      alert('Something went wrong sending your enquiry. Please call us directly at +91 85951 30550.');
+      btn.textContent = originalText;
+      btn.disabled = false;
+    }
+  })
+  .catch(() => {
+    alert('Could not send your enquiry — please check your internet connection, or call us at +91 85951 30550.');
+    btn.textContent = originalText;
+    btn.disabled = false;
+  });
+
+  return false;
 }
 </script>
 </body>
