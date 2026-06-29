@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ODPL | Interior Fit-Out Execution, Painting &amp; Waterproofing — Delhi NCR</title>
+<meta name="description" content="Omendra Developers Pvt. Ltd. (ODPL) — Interior Fit-Out Execution, Civil Construction, Painting (Interior/Exterior, PU Polish, Melamine Polish, Deco Texture) and Waterproofing Solutions across Delhi NCR. In-house execution team."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF9F6;
+  --bg2:#F2EEE7;
+  --surface:#FFFFFF;
+  --ink:#211D18;
+  --orange:#E97031;
+  --rust:#B23E1F;
+  --navy:#1C3A52;
+  --grey:#6E6960;
+  --grey2:#9B9587;
+  --line:#E6E0D5;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+.mono{font-family:'JetBrains Mono',monospace;}
+h1,h2,h3{font-family:'Montserrat',sans-serif;font-weight:800;letter-spacing:-0.02em;}
+.wordmark{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-0.02em;}
+.container{max-width:1180px;margin:0 auto;padding:0 28px;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+::selection{background:var(--orange);color:#fff;}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion: reduce){ .reveal{opacity:1!important;transform:none!important;transition:none!important;} }
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 28px;
+  background:rgba(251,249,246,0.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-logo{display:flex;align-items:center;}
+.nav-logo .wordmark{font-size:26px;color:var(--orange);line-height:1;font-weight:900;}
+.nav-logo .nav-sub{font-family:'Montserrat',sans-serif;font-weight:700;font-size:9px;color:var(--grey2);letter-spacing:0.22em;text-transform:uppercase;display:block;margin-top:3px;}
+.nav-links{display:flex;gap:30px;}
+.nav-links a{font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink);opacity:0.78;transition:opacity .2s,color .2s;}
+.nav-links a:hover{opacity:1;color:var(--orange);}
+.nav-cta{
+  background:var(--orange);color:#fff;padding:11px 22px;border-radius:3px;
+  font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+  transition:background .2s;
+}
+.nav-cta:hover{background:var(--rust);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:24px;height:2px;background:var(--ink);}
+.mobile-menu{
+  display:none;flex-direction:column;position:fixed;top:0;right:0;height:100vh;width:78%;
+  background:var(--surface);z-index:1100;padding:90px 32px;gap:26px;
+  transform:translateX(100%);transition:transform .35s ease;box-shadow:-10px 0 30px rgba(0,0,0,0.08);
+}
+.mobile-menu.open{transform:translateX(0);}
+.mobile-menu a{font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;color:var(--ink);}
+
+/* HERO */
+.hero{
+  min-height:92vh;display:flex;align-items:center;position:relative;
+  padding:130px 0 70px;
+  background:var(--bg);
+  overflow:hidden;
+}
+.hero-blob{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;z-index:0;}
+.hero-blob-1{width:560px;height:560px;top:-220px;right:-120px;background:radial-gradient(circle, rgba(233,112,49,0.22), transparent 70%);animation:blob-float-1 14s ease-in-out infinite;}
+.hero-blob-2{width:420px;height:420px;bottom:-180px;left:-100px;background:radial-gradient(circle, rgba(178,62,31,0.14), transparent 70%);animation:blob-float-2 18s ease-in-out infinite;}
+@keyframes blob-float-1{ 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(-30px,40px) scale(1.08);} }
+@keyframes blob-float-2{ 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(25px,-30px) scale(1.06);} }
+@media (prefers-reduced-motion: reduce){ .hero-blob{animation:none;} }
+.hero-stripe{position:absolute;top:0;right:60px;width:6px;height:100%;background:repeating-linear-gradient(135deg, var(--orange) 0 10px, transparent 10px 20px);opacity:0.35;z-index:0;display:none;}
+@media (min-width:1100px){ .hero-stripe{display:block;} }
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr 0.85fr;gap:60px;align-items:center;}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);margin-bottom:20px;}
+.hero-eyebrow::before{content:'';width:34px;height:1px;background:var(--orange);}
+.hero-h1-full{font-size:clamp(22px,2.6vw,36px);line-height:1.2;margin:0 0 26px;white-space:nowrap;}
+.hero-odpl{color:var(--orange);font-weight:900;}
+.hero-tagline{color:var(--navy);font-weight:500;}
+.hero-sub{font-size:19px;font-weight:500;color:var(--ink);max-width:570px;margin-bottom:18px;line-height:1.5;}
+.hero-sub strong{font-weight:700;color:var(--orange);}
+.hero p.lead{font-size:15px;color:var(--grey);max-width:540px;margin-bottom:32px;line-height:1.65;}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:44px;}
+.btn-primary{background:var(--orange);color:#fff;padding:16px 30px;border-radius:3px;font-weight:700;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;transition:background .2s,transform .2s;display:inline-block;position:relative;overflow:hidden;}
+.btn-primary::before{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;background:linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);transform:skewX(-20deg);transition:left .55s ease;}
+.btn-primary:hover::before{left:125%;}
+.btn-primary:hover{background:var(--rust);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);padding:16px 30px;border-radius:3px;font-weight:600;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;transition:border-color .2s,color .2s;}
+.btn-ghost:hover{border-color:var(--orange);color:var(--orange);}
+.hero-pillars{display:flex;gap:30px;flex-wrap:wrap;}
+.hero-pillar .num{font-family:'Montserrat',sans-serif;font-weight:800;font-size:26px;color:var(--ink);}
+.hero-pillar .label{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--grey2);letter-spacing:0.06em;text-transform:uppercase;margin-top:2px;max-width:130px;}
+
+.coat-panel{
+  background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:30px 28px;box-shadow:0 12px 40px rgba(33,29,24,0.05);
+}
+.coat-panel .coat-title{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey2);margin-bottom:20px;display:flex;justify-content:space-between;}
+.coat-layer{display:flex;align-items:center;gap:14px;padding:13px 0;border-top:1px solid var(--line);}
+.coat-layer:first-child{border-top:none;}
+.coat-layer .coat-num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--orange);width:22px;}
+.coat-layer .coat-bar{height:7px;border-radius:4px;background:var(--bg2);flex:1;position:relative;overflow:hidden;}
+.coat-layer .coat-bar::after{content:'';position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:linear-gradient(90deg, var(--orange), var(--rust));}
+.coat-layer:nth-child(2) .coat-bar::after{width:35%;}
+.coat-layer:nth-child(3) .coat-bar::after{width:55%;}
+.coat-layer:nth-child(4) .coat-bar::after{width:75%;}
+.coat-layer:nth-child(5) .coat-bar::after{width:92%;}
+.coat-layer:nth-child(6) .coat-bar::after{width:100%;}
+.coat-layer .coat-name{font-size:12.5px;font-weight:600;width:118px;flex-shrink:0;color:var(--ink);}
+
+/* SECTION GENERIC */
+.section{padding:100px 0;}
+.section-tag{display:flex;align-items:center;gap:12px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);margin-bottom:16px;}
+.section-tag::after{content:'';flex:1;height:1px;background:var(--line);max-width:60px;}
+.section-title{font-size:38px;color:var(--ink);margin-bottom:16px;}
+.section-title em{font-style:normal;color:var(--orange);}
+.section-body{font-size:16px;color:var(--grey);max-width:640px;}
+
+/* CORE CAPABILITY BANNER */
+.core-banner{background:var(--ink);color:#fff;border-radius:10px;padding:34px 34px;margin-top:46px;}
+.core-banner-head{display:flex;align-items:baseline;gap:16px;margin-bottom:22px;flex-wrap:wrap;}
+.core-banner-head .pillar-eyebrow{color:var(--orange);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;}
+.core-banner-head h3{font-size:23px;color:#fff;}
+.core-tags{display:flex;flex-wrap:wrap;gap:10px;}
+.core-tags span{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);padding:9px 16px;border-radius:30px;font-size:12.5px;color:rgba(255,255,255,0.85);}
+
+/* EXCLUSIVE SERVICES - vertical stack */
+.excl-head{margin-top:64px;margin-bottom:24px;}
+.excl-list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+.excl-row{display:flex;align-items:center;gap:24px;padding:28px 30px;background:var(--surface);border-bottom:1px solid var(--line);text-decoration:none;transition:background .2s,padding-left .2s;}
+.excl-row:last-child{border-bottom:none;}
+.excl-row:hover{background:var(--bg2);padding-left:38px;}
+.excl-num{font-size:14px;color:var(--orange);width:30px;flex-shrink:0;}
+.excl-content{flex:1;}
+.excl-content h3{font-size:19px;color:var(--ink);margin-bottom:5px;font-weight:700;}
+.excl-content p{font-size:12.5px;color:var(--grey);margin:0;}
+.excl-arrow{font-size:20px;color:var(--orange);opacity:0;transition:opacity .2s,transform .2s;flex-shrink:0;}
+.excl-row:hover .excl-arrow{opacity:1;transform:translateX(4px);}
+
+/* SERVICE DETAIL GRIDS */
+.subsection{margin-top:80px;}
+.subsection-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;flex-wrap:wrap;gap:10px;}
+.subsection-head h3{font-size:24px;color:var(--ink);}
+.subsection-head span{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--grey2);}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+.svc-card{background:var(--surface);padding:30px 26px;transition:background .2s,box-shadow .25s;position:relative;border-left:3px solid transparent;}
+.svc-card:hover{background:var(--bg2);border-left-color:var(--orange);box-shadow:inset 0 0 0 1px rgba(233,112,49,0.08);}
+.svc-tagicon{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--orange);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;display:block;}
+.svc-card h4{font-size:17px;color:var(--ink);margin-bottom:10px;letter-spacing:-0.01em;}
+.svc-card p{font-size:13px;color:var(--grey);}
+
+.wp-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+.wp-pill{border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:20px 14px;text-align:center;transition:border-color .2s,transform .2s,box-shadow .2s;}
+.wp-pill:hover{border-color:var(--orange);transform:translateY(-3px);box-shadow:0 10px 22px rgba(33,29,24,0.08);}
+.wp-pill .wp-name{font-size:12.5px;font-weight:600;color:var(--ink);}
+
+.fit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.fit-item{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:24px 22px;transition:transform .25s,box-shadow .25s,border-color .25s;}
+.fit-item:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(33,29,24,0.08);border-color:rgba(233,112,49,0.3);}
+.fit-item .fit-icon{color:var(--orange);font-size:18px;margin-bottom:10px;display:block;}
+.fit-item h4{font-size:15px;margin-bottom:6px;color:var(--ink);}
+.fit-item p{font-size:12.5px;color:var(--grey);}
+
+/* MARQUEE TICKER */
+.ticker-wrap{background:var(--ink);overflow:hidden;padding:14px 0;position:relative;border-top:1px solid rgba(255,255,255,0.06);}
+.ticker-track{display:flex;white-space:nowrap;animation:ticker-scroll 28s linear infinite;}
+.ticker-track span{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(239,235,227,0.55);padding:0 22px;display:inline-flex;align-items:center;gap:22px;}
+.ticker-track span.accent{color:var(--orange);}
+.ticker-track span::after{content:'◆';color:var(--orange);font-size:8px;}
+@keyframes ticker-scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+@media (prefers-reduced-motion: reduce){ .ticker-track{animation:none;} }
+
+/* WHY US BAR - dark contrast band */
+.whyus{background:var(--ink);position:relative;overflow:hidden;}
+.whyus::before{content:'';position:absolute;top:-40%;right:-10%;width:50%;height:160%;background:radial-gradient(circle, rgba(233,112,49,0.16), transparent 65%);pointer-events:none;}
+.whyus .container{display:grid;grid-template-columns:repeat(5,1fr);gap:0;padding:0 28px;position:relative;z-index:1;}
+.why-item{padding:42px 18px;border-right:1px solid rgba(255,255,255,0.08);text-align:center;transition:background .25s;}
+.why-item:hover{background:rgba(233,112,49,0.06);}
+.why-item:last-child{border-right:none;}
+.why-item .why-icon{font-size:26px;color:var(--orange);margin-bottom:12px;display:inline-block;transition:transform .3s;}
+.why-item:hover .why-icon{transform:translateY(-4px) scale(1.08);}
+.why-item .why-title{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:6px;color:#EFEBE3;}
+.why-item .why-desc{font-size:11.5px;color:#9B958A;}
+
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:50px;}
+.proc-step{position:relative;padding-top:22px;}
+.proc-step .proc-num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:36px;color:rgba(233,112,49,0.16);position:absolute;top:-12px;left:0;}
+.proc-step h4{font-size:14.5px;margin-bottom:8px;position:relative;z-index:1;color:var(--ink);}
+.proc-step p{font-size:12.5px;color:var(--grey);position:relative;z-index:1;}
+
+/* MATERIALS */
+.materials{background:var(--bg2);}
+.mat-list{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;}
+.mat-chip{border:1px solid var(--line);background:var(--surface);padding:13px 22px;border-radius:30px;font-size:13.5px;font-weight:600;color:var(--ink);transition:border-color .2s,background .2s,transform .2s;}
+.mat-chip:hover{border-color:var(--orange);background:var(--bg2);transform:translateY(-2px);}
+.mat-note{font-size:11.5px;color:var(--grey2);margin-top:20px;font-family:'JetBrains Mono',monospace;}
+
+/* ABOUT */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.about-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 18px;margin-top:32px;}
+.about-fact .num{font-family:'Montserrat',sans-serif;font-weight:800;font-size:26px;color:var(--orange);}
+.about-fact .label{font-size:11.5px;color:var(--grey);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.04em;margin-top:4px;}
+.projects-list{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface);}
+.proj-row{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line);}
+.proj-row:last-child{border-bottom:none;}
+.proj-row .proj-name{font-size:13.5px;font-weight:600;color:var(--ink);}
+.proj-row .proj-loc{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--grey2);text-transform:uppercase;}
+
+/* MONOLITO CROSS LINK */
+.cross-link{background:#1A1917;}
+.cross-card{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:26px;border:1px solid rgba(201,160,90,0.3);border-radius:8px;padding:34px 38px;}
+.cross-left .cross-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#C9A05A;margin-bottom:9px;}
+.cross-left h3{font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#EFEBE3;margin-bottom:8px;}
+.cross-left p{font-size:13px;color:#9B958A;max-width:480px;}
+.cross-btn{border:1px solid #C9A05A;color:#C9A05A;padding:13px 24px;border-radius:3px;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;transition:background .2s,color .2s;}
+.cross-btn:hover{background:#C9A05A;color:#1A1917;}
+
+/* ENQUIRY */
+.enquiry{background:var(--surface);}
+.enquiry-wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;}
+.form-field{display:flex;flex-direction:column;gap:6px;}
+.form-field.full{grid-column:1/-1;}
+.form-field label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey2);}
+.form-field input,.form-field select,.form-field textarea{
+  background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:12px 14px;color:var(--ink);font-family:'Inter',sans-serif;font-size:14px;
+}
+.form-field textarea{resize:vertical;min-height:88px;}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:var(--orange);}
+.submit-btn{background:var(--orange);color:#fff;border:none;padding:15px 0;border-radius:4px;font-weight:700;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;cursor:pointer;margin-top:20px;width:100%;transition:background .2s;}
+.submit-btn:hover{background:var(--rust);}
+.form-success{display:none;text-align:center;padding:60px 20px;background:var(--bg2);border-radius:8px;}
+.form-success.show{display:block;}
+.form-success h3{color:var(--orange);margin-bottom:10px;font-size:20px;}
+.contact-block{border-left:3px solid var(--orange);padding-left:22px;}
+.contact-block .cb-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--grey2);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
+.contact-block .cb-value{font-size:14.5px;margin-bottom:22px;color:var(--ink);}
+
+/* FOOTER */
+footer{background:var(--ink);color:#EFEBE3;padding:56px 0 28px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:46px;margin-bottom:40px;}
+.footer-wordmark{font-size:26px;margin-bottom:6px;color:var(--orange);font-weight:900;}
+.footer-tagline{font-family:'Montserrat',sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:#9B958A;margin-bottom:16px;}
+footer p{font-size:12.5px;color:#9B958A;line-height:1.7;}
+.footer-col h5{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--orange);margin-bottom:14px;}
+.footer-col a, .footer-col div{display:block;font-size:12.5px;color:#9B958A;margin-bottom:9px;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:11px;color:#6E6960;font-family:'JetBrains Mono',monospace;}
+
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero h1{font-size:38px;}
+  .whyus .container{grid-template-columns:repeat(2,1fr);}
+  .why-item{border-right:1px solid var(--line);}
+  .why-item:nth-child(even){border-right:none;}
+  .excl-row{padding:22px 22px;gap:16px;}
+  .svc-grid{grid-template-columns:1fr 1fr;}
+  .wp-grid{grid-template-columns:repeat(2,1fr);}
+  .fit-grid{grid-template-columns:1fr 1fr;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .about-wrap{grid-template-columns:1fr;}
+  .enquiry-wrap{grid-template-columns:1fr;}
+  .form-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .mobile-menu{display:flex;}
+}
+@media (max-width:600px){
+  .hero-h1-full{white-space:normal;font-size:22px;}
+  .excl-row{flex-wrap:wrap;}
+  .excl-arrow{display:none;}
+  .svc-grid{grid-template-columns:1fr;}
+  .wp-grid{grid-template-columns:1fr 1fr;}
+  .fit-grid{grid-template-columns:1fr;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .about-facts{grid-template-columns:1fr 1fr;}
+  .cross-card{flex-direction:column;align-items:flex-start;}
+  .hero h1{font-size:30px;}
+  .section-title{font-size:28px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <div>
+      <div class="wordmark">ODPL</div>
+      <span class="nav-sub">We Build Better</span>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#services">Interior Fit-Out</a>
+    <a href="#painting">Painting</a>
+    <a href="#waterproofing">Waterproofing</a>
+    <a href="#rebar">Rebar Work</a>
+    <a href="#about">About</a>
+    <a href="#monolito">MONOLITO™</a>
+  </div>
+  <a href="#enquiry" class="nav-cta">Get a Quote</a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMenu()">Interior Fit-Out</a>
+  <a href="#painting" onclick="closeMenu()">Painting</a>
+  <a href="#waterproofing" onclick="closeMenu()">Waterproofing</a>
+  <a href="#rebar" onclick="closeMenu()">Rebar Work</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#monolito" onclick="closeMenu()">MONOLITO™</a>
+  <a href="#enquiry" onclick="closeMenu()" style="color:var(--orange);">Get a Quote</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-stripe"></div>
+  <div class="container">
+    <div class="hero-eyebrow">Delhi NCR · Interior Fit-Out Execution</div>
+    <h1 class="hero-h1-full"><span class="hero-odpl">ODPL</span> — <span class="hero-tagline">An Interior Fit-Out Execution Company</span></h1>
+  </div>
+  <div class="container hero-inner">
+    <div>
+      <p class="hero-sub">Dedicated in-house team, trained for <strong>Painting Services</strong>, <strong>Waterproofing</strong> and <strong>Rebar Work</strong>.</p>
+      <p class="lead">We execute — civil works, MEP, complete interior finishing — to your architect's or designer's specification. We build to the plan; we don't compete on design. One in-house team, accountable end to end.</p>
+      <div class="hero-ctas">
+        <a href="#enquiry" class="btn-primary">Book a Site Inspection</a>
+        <a href="#services" class="btn-ghost">Explore Our Services</a>
+      </div>
+      <div class="hero-pillars">
+        <div class="hero-pillar"><div class="num">2024</div><div class="label">Incorporated</div></div>
+        <div class="hero-pillar"><div class="num">20+ yrs</div><div class="label">Founder's Industry Experience</div></div>
+        <div class="hero-pillar"><div class="num">In-House</div><div class="label">Civil · MEP · Finishing Team</div></div>
+      </div>
+    </div>
+    <div class="coat-panel reveal">
+      <div class="coat-title"><span>SURFACE PROTECTION SYSTEM</span><span>FOR PAINTING JOBS</span></div>
+      <div class="coat-layer"><span class="coat-num mono">01</span><span class="coat-name">Surface Prep</span><span class="coat-bar"></span></div>
+      <div class="coat-layer"><span class="coat-num mono">02</span><span class="coat-name">Primer Coat</span><span class="coat-bar"></span></div>
+      <div class="coat-layer"><span class="coat-num mono">03</span><span class="coat-name">Base / Putty</span><span class="coat-bar"></span></div>
+      <div class="coat-layer"><span class="coat-num mono">04</span><span class="coat-name">Top Coat(s)</span><span class="coat-bar"></span></div>
+      <div class="coat-layer"><span class="coat-num mono">05</span><span class="coat-name">Sealant / Finish</span><span class="coat-bar"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="accent">Interior Fit-Out Execution</span><span>Civil &amp; MEP Works</span><span class="accent">Painting Services</span><span>Interior &amp; Exterior Grade</span><span class="accent">PU Polish</span><span>Melamine Polish</span><span class="accent">Deco Texture Paint</span><span>Waterproofing Solutions</span><span class="accent">Terrace · Bathroom · Basement</span><span>Delhi NCR</span>
+    <span class="accent">Interior Fit-Out Execution</span><span>Civil &amp; MEP Works</span><span class="accent">Painting Services</span><span>Interior &amp; Exterior Grade</span><span class="accent">PU Polish</span><span>Melamine Polish</span><span class="accent">Deco Texture Paint</span><span>Waterproofing Solutions</span><span class="accent">Terrace · Bathroom · Basement</span><span>Delhi NCR</span>
+  </div>
+</div>
+
+<!-- WHY US -->
+<div class="whyus">
+  <div class="container">
+    <div class="why-item"><div class="why-icon">⌂</div><div class="why-title">In-House Team</div><div class="why-desc">Civil, MEP, painting &amp; finishing under one roof</div></div>
+    <div class="why-item"><div class="why-icon">⚙</div><div class="why-title">Mechanised Tools</div><div class="why-desc">Faster, cleaner execution across every trade</div></div>
+    <div class="why-item"><div class="why-icon">◎</div><div class="why-title">Site Inspection</div><div class="why-desc">₹1,000 — fully adjusted if work is awarded</div></div>
+    <div class="why-item"><div class="why-icon">▣</div><div class="why-title">Manufacturer-Grade</div><div class="why-desc">Materials from leading paint &amp; building brands</div></div>
+    <div class="why-item"><div class="why-icon">✓</div><div class="why-title">Warranty-Backed</div><div class="why-desc">Documented scope &amp; warranty on every project</div></div>
+  </div>
+</div>
+
+<!-- OUR SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-tag reveal">Our Services</div>
+    <h2 class="section-title reveal">Interior Fit-Out Execution. <em>Plus Exclusive Services.</em></h2>
+    <p class="section-body reveal">ODPL is, at its core, an Interior Fit-Out Execution Company. Beyond that, we deliver three exclusive, manufacturer-grade service verticals — independently, or as part of a larger fit-out project.</p>
+
+    <!-- CORE: INTERIOR FIT-OUT -->
+    <div class="core-banner reveal">
+      <div class="core-banner-head">
+        <div class="pillar-eyebrow">Core Capability</div>
+        <h3>Interior Fit-Out Execution</h3>
+      </div>
+      <div class="core-tags">
+        <span>Civil Works &amp; Structural Finishing</span>
+        <span>Electrical &amp; Low-Voltage Systems</span>
+        <span>HVAC, Plumbing &amp; Networking</span>
+        <span>False Ceiling, Partitions &amp; Joinery</span>
+        <span>Office, Retail &amp; Institutional Fit-Out</span>
+      </div>
+    </div>
+
+    <!-- EXCLUSIVE SERVICES - vertical stack -->
+    <div class="excl-head reveal">
+      <div class="section-tag" style="margin-bottom:8px;">Exclusive Services</div>
+      <p class="section-body" style="margin-bottom:0;">Three specialised verticals, delivered with the same in-house precision as our core fit-out work.</p>
+    </div>
+
+    <div class="excl-list reveal">
+      <a href="#painting" class="excl-row">
+        <div class="excl-num mono">01</div>
+        <div class="excl-content">
+          <h3>Painting Services</h3>
+          <p>Interior Grade · Exterior Grade · PU Polish · Melamine Polish · PU Paint · Deco / Texture Paint</p>
+        </div>
+        <div class="excl-arrow">→</div>
+      </a>
+      <a href="#waterproofing" class="excl-row">
+        <div class="excl-num mono">02</div>
+        <div class="excl-content">
+          <h3>Waterproofing Solutions</h3>
+          <p>Terrace · Bathroom · Basement · Crack &amp; Joint Filling · Water Tank · PU / Elastomeric Coatings</p>
+        </div>
+        <div class="excl-arrow">→</div>
+      </a>
+      <a href="#rebar" class="excl-row">
+        <div class="excl-num mono">03</div>
+        <div class="excl-content">
+          <h3>Rebar Work</h3>
+          <p>RCC Reinforcement &amp; Binding · Bar Bending Schedule (BBS) · Footing &amp; Foundation Rebar</p>
+        </div>
+        <div class="excl-arrow">→</div>
+      </a>
+    </div>
+
+    <!-- INTERIOR FIT-OUT DETAIL -->
+    <div class="subsection reveal">
+      <div class="subsection-head"><h3>Interior Fit-Out Execution — What We Execute</h3><span class="mono">CORE CAPABILITY</span></div>
+      <div class="fit-grid">
+        <div class="fit-item"><span class="fit-icon">▦</span><h4>Civil &amp; Structural</h4><p>Masonry, plastering, flooring base-work and structural finishing.</p></div>
+        <div class="fit-item"><span class="fit-icon">⚡</span><h4>Electrical &amp; Low-Voltage</h4><p>Wiring, panels, networking and low-voltage systems, in-house.</p></div>
+        <div class="fit-item"><span class="fit-icon">❄</span><h4>HVAC &amp; Plumbing</h4><p>Climate control and plumbing lines integrated into the fit-out plan.</p></div>
+        <div class="fit-item"><span class="fit-icon">▭</span><h4>Partitions &amp; False Ceiling</h4><p>Gypsum, glass and modular partition systems, false ceiling and joinery.</p></div>
+        <div class="fit-item"><span class="fit-icon">⬡</span><h4>Seamless Handover</h4><p>From the architect's drawing to keys-in-hand — one point of accountability.</p></div>
+        <div class="fit-item"><span class="fit-icon">◐</span><h4>Office · Retail · Institutional</h4><p>Corporate offices, showrooms, schools and hospitality fit-outs.</p></div>
+      </div>
+    </div>
+
+    <!-- PAINTING DETAIL -->
+    <div class="subsection reveal" id="painting">
+      <div class="subsection-head"><h3>Painting Services</h3><span class="mono">EXCLUSIVE SERVICE 01</span></div>
+      <div class="svc-grid">
+        <div class="svc-card"><span class="svc-tagicon mono">Walls — Interior</span><h4>Interior Grade Painting</h4><p>Smooth, washable, low-VOC finishes with full surface prep and multi-coat application.</p></div>
+        <div class="svc-card"><span class="svc-tagicon mono">Walls — Exterior</span><h4>Exterior Grade Painting</h4><p>Weather, dust and fungal-resistant exterior systems built for Delhi NCR's climate.</p></div>
+        <div class="svc-card"><span class="svc-tagicon mono">Wood &amp; Furniture</span><h4>PU Polish</h4><p>A glass-smooth, scratch and chemical-resistant finish, hand-sanded between coats.</p></div>
+        <div class="svc-card"><span class="svc-tagicon mono">Wood &amp; Furniture</span><h4>Melamine Polish</h4><p>The classic fast-curing wood-grain finish, matte to satin.</p></div>
+        <div class="svc-card"><span class="svc-tagicon mono">Walls · Metal · Wood</span><h4>PU Paint</h4><p>Premium polyurethane paint — exceptional colour retention and washability.</p></div>
+        <div class="svc-card"><span class="svc-tagicon mono">Designer Walls</span><h4>Deco / Texture Paint</h4><p>Stucco, metallics and layered designer textures for feature walls.</p></div>
+      </div>
+    </div>
+
+    <!-- WATERPROOFING DETAIL -->
+    <div class="subsection reveal" id="waterproofing">
+      <div class="subsection-head"><h3>Waterproofing Solutions</h3><span class="mono">EXCLUSIVE SERVICE 02</span></div>
+      <div class="wp-grid">
+        <div class="wp-pill"><div class="wp-name">Terrace &amp; Roof</div></div>
+        <div class="wp-pill"><div class="wp-name">Bathroom</div></div>
+        <div class="wp-pill"><div class="wp-name">Basement</div></div>
+        <div class="wp-pill"><div class="wp-name">Crack &amp; Joint Filling</div></div>
+        <div class="wp-pill"><div class="wp-name">Water Tank</div></div>
+        <div class="wp-pill"><div class="wp-name">Exterior Wall</div></div>
+        <div class="wp-pill"><div class="wp-name">Interior Damp Wall</div></div>
+        <div class="wp-pill"><div class="wp-name">Tiling &amp; Grouting</div></div>
+        <div class="wp-pill"><div class="wp-name">Foundation</div></div>
+        <div class="wp-pill"><div class="wp-name">PU / Elastomeric Coatings</div></div>
+      </div>
+    </div>
+
+    <!-- REBAR WORK DETAIL -->
+    <div class="subsection reveal" id="rebar">
+      <div class="subsection-head"><h3>Rebar Work</h3><span class="mono">EXCLUSIVE SERVICE 03</span></div>
+      <div class="svc-grid">
+        <div class="svc-card"><span class="svc-tagicon mono">Structural</span><h4>RCC Reinforcement &amp; Binding</h4><p>Precision steel reinforcement and binding for columns, beams and slabs.</p></div>
+        <div class="svc-card"><span class="svc-tagicon mono">Structural</span><h4>Bar Bending Schedule (BBS)</h4><p>Accurate BBS execution aligned to structural drawings, minimising wastage.</p></div>
+        <div class="svc-card"><span class="svc-tagicon mono">Foundation</span><h4>Footing &amp; Foundation Rebar</h4><p>Reinforcement work for footings and foundations, inspected before pour.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" style="background:var(--bg2);">
+  <div class="container">
+    <div class="section-tag reveal">How It Works</div>
+    <h2 class="section-title reveal">From Site Visit To <em>Handover</em></h2>
+    <div class="process-grid reveal">
+      <div class="proc-step"><div class="proc-num mono">01</div><h4>Site Inspection</h4><p>₹1,000 inspection fee — fully adjusted against your project if work is awarded to us.</p></div>
+      <div class="proc-step"><div class="proc-num mono">02</div><h4>Scope &amp; Quote</h4><p>Transparent scope, materials and pricing — no hidden line items.</p></div>
+      <div class="proc-step"><div class="proc-num mono">03</div><h4>Preparation</h4><p>Civil, surface and structural prep — the step most contractors skip.</p></div>
+      <div class="proc-step"><div class="proc-num mono">04</div><h4>Execution</h4><p>In-house trained team, mechanised tools, daily supervision.</p></div>
+      <div class="proc-step"><div class="proc-num mono">05</div><h4>Handover</h4><p>Final inspection, clean-up and documented warranty handover.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section class="section materials">
+  <div class="container">
+    <div class="section-tag reveal">Materials We Work With</div>
+    <h2 class="section-title reveal">Manufacturer-Grade <em>Systems</em></h2>
+    <p class="section-body reveal">For Painting &amp; Waterproofing projects, we use products and systems from India's established paint and construction-chemical manufacturers — selected on the basis of surface, exposure and budget. Formal partnership agreements with select manufacturers are currently being formalised.</p>
+    <div class="mat-list reveal">
+      <div class="mat-chip">Asian Paints</div>
+      <div class="mat-chip">Berger Paints</div>
+      <div class="mat-chip">Nerolac</div>
+      <div class="mat-chip">Dulux</div>
+      <div class="mat-chip">Sirca</div>
+      <div class="mat-chip">Pidilite / Dr. Fixit</div>
+      <div class="mat-chip">Sika</div>
+      <div class="mat-chip">JSW</div>
+    </div>
+    <div class="mat-note reveal">* Brand names indicate materials and systems used on-site; logos and trademarks belong to their respective owners.</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container about-wrap">
+    <div class="reveal">
+      <div class="section-tag">About ODPL</div>
+      <h2 class="section-title">Built On Control, <br/>Not Dependence.</h2>
+      <p class="section-body">Omendra Developers Pvt. Ltd. is a Delhi NCR-based interior fit-out execution company offering civil construction, painting and waterproofing services across North India. We execute to architect and designer specifications — our core strength is an in-house team of engineers spanning civil, electrical, HVAC, plumbing, networking and finishing, meaning tighter control over quality, timelines and cost, without over-dependence on external vendors. Every project is tracked end-to-end on our own in-house Project Management System (PMS) — daily site reports, material logs and digital sign-offs, in real time.</p>
+      <div class="about-facts">
+        <div class="about-fact"><div class="num count-up" data-target="16" data-suffix="+">0</div><div class="label">In-House Engineers &amp; Staff</div></div>
+        <div class="about-fact"><div class="num count-up" data-target="6" data-suffix="+">0</div><div class="label">Live Sites — Delhi NCR</div></div>
+        <div class="about-fact"><div class="num count-up" data-target="100" data-suffix="%">0</div><div class="label">In-House Core Team</div></div>
+        <div class="about-fact"><div class="num">PMS</div><div class="label">Dedicated Project Monitoring</div></div>
+        <div class="about-fact"><div class="num">UDYAM</div><div class="label">MSME Registered</div></div>
+        <div class="about-fact"><div class="num count-up" data-target="2024" data-suffix="">0</div><div class="label">Incorporated</div></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="projects-list" id="projects">
+        <div class="proj-row"><span class="proj-name">Corporate &amp; Commercial Office Fit-Outs</span><span class="proj-loc mono">DELHI NCR</span></div>
+        <div class="proj-row"><span class="proj-name">Civil &amp; Structural Construction Works</span><span class="proj-loc mono">MULTI-CITY</span></div>
+        <div class="proj-row"><span class="proj-name">School &amp; Institutional Renovations</span><span class="proj-loc mono">DELHI NCR</span></div>
+        <div class="proj-row"><span class="proj-name">Residential &amp; Commercial Painting Projects</span><span class="proj-loc mono">DELHI NCR</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MONOLITO CROSS LINK -->
+<section class="cross-link" id="monolito">
+  <div class="container" style="padding:60px 28px;">
+    <div class="cross-card reveal">
+      <div class="cross-left">
+        <div class="cross-eyebrow">Also From ODPL</div>
+        <h3>MONOLITO™ — Premium Metallic Resin Flooring</h3>
+        <p>For clients seeking a signature, artistic flooring statement — our sister brand MONOLITO crafts bespoke metallic epoxy, marble-effect and 3D resin floors.</p>
+      </div>
+      <a href="https://monolito.in" class="cross-btn" target="_blank" rel="noopener">Explore MONOLITO →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+<section class="section enquiry" id="enquiry">
+  <div class="container enquiry-wrap">
+    <div class="reveal">
+      <div class="section-tag">Get Started</div>
+      <h2 class="section-title">Book A <em>Site Inspection</em></h2>
+      <p class="section-body" style="margin-bottom:36px;">A ₹1,000 inspection fee applies — fully adjusted against your project cost if the work is awarded to us. Our team will get in touch usually within 24 hours.</p>
+      <div class="contact-block">
+        <div class="cb-label">Operating Office</div>
+        <div class="cb-value">Office No-44, 1st Floor, DDA Market<br/>Opposite SDM Office, Sector-10,<br/>Dwarka, New Delhi-110075</div>
+        <div class="cb-label">Phone / Email</div>
+        <div class="cb-value">+91 85951 30550 · 011-49097295<br/>info@odpl.net.in</div>
+        <div class="cb-label">CIN</div>
+        <div class="cb-value mono" style="font-size:13px;">U74102DL2024PTC426453</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div id="enquiryForm">
+        <div class="form-grid">
+          <div class="form-field"><label>Your Name *</label><input type="text" id="fname" placeholder="Full name"/></div>
+          <div class="form-field"><label>Mobile Number *</label><input type="tel" id="fmobile" placeholder="+91 XXXXX XXXXX"/></div>
+          <div class="form-field"><label>Email</label><input type="email" id="femail" placeholder="your@email.com"/></div>
+          <div class="form-field"><label>City *</label><input type="text" id="fcity" placeholder="Delhi, Gurgaon, Noida..."/></div>
+          <div class="form-field">
+            <label>Service Required *</label>
+            <select id="fservice">
+              <option value="">Select service</option>
+              <option>Interior Fit-Out / Civil Works</option>
+              <option>Interior Grade Painting</option>
+              <option>Exterior Grade Painting</option>
+              <option>PU Polish</option>
+              <option>Melamine Polish</option>
+              <option>PU Paint</option>
+              <option>Deco / Texture Paint</option>
+              <option>Waterproofing</option>
+              <option>Rebar Work</option>
+              <option>Full Fit-Out + Painting + Waterproofing</option>
+              <option>MONOLITO — Resin Flooring</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Property Type</label>
+            <select id="fspace">
+              <option value="">Select</option>
+              <option>Residential</option>
+              <option>Commercial — Office</option>
+              <option>Commercial — Retail / Showroom</option>
+              <option>Institutional — School / Hospital</option>
+              <option>Industrial / Warehouse</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field full"><label>Describe Your Requirement</label><textarea id="fvision" placeholder="Area (sq.ft.), current condition, timeline, or anything else we should know..."></textarea></div>
+        </div>
+        <button class="submit-btn" onclick="submitEnquiry()">Book Site Inspection — ₹1,000</button>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <h3>Request Received</h3>
+        <p style="color:var(--grey);">Our team will contact you shortly to schedule your site inspection and share payment details for the ₹1,000 inspection fee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-wordmark">ODPL</div>
+        <div class="footer-tagline">We Build Better</div>
+        <p>Omendra Developers Private Limited — a Delhi NCR-based interior fit-out execution company offering Civil Construction, Painting and Waterproofing services across North India.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <a href="#services">Interior Fit-Out</a>
+        <a href="#painting">Painting Services</a>
+        <a href="#waterproofing">Waterproofing</a>
+        <a href="#rebar">Rebar Work</a>
+        <a href="#about">About ODPL</a>
+        <a href="https://monolito.in" target="_blank" rel="noopener">MONOLITO™</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <div>CIN: U74102DL2024PTC426453</div>
+        <div>GSTIN: 07AAECO3001G1ZZ</div>
+        <div>MSME: UDYAM-DL-10-0088114</div>
+        <div>PAN: AAECO3001G</div>
+        <div>Office No-44, 1st Floor, DDA Market,<br/>Opp. SDM Office, Sector-10, Dwarka,<br/>New Delhi-110075</div>
+        <div>+91 85951 30550 · 011-49097295</div>
+        <div>info@odpl.net.in</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 OMENDRA DEVELOPERS PRIVATE LIMITED. ALL RIGHTS RESERVED.</span>
+      <span>DELHI NCR</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');}
+
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+},{threshold:0.1});
+revealEls.forEach(el=>obs.observe(el));
+
+// count-up stats
+const countEls = document.querySelectorAll('.count-up');
+const countObs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el = e.target;
+      const target = parseInt(el.getAttribute('data-target'),10);
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 900;
+      const start = performance.now();
+      function tick(now){
+        const progress = Math.min((now-start)/duration, 1);
+        el.textContent = Math.floor(progress*target) + suffix;
+        if(progress < 1){ requestAnimationFrame(tick); } else { el.textContent = target + suffix; }
+      }
+      requestAnimationFrame(tick);
+      countObs.unobserve(el);
+    }
+  });
+},{threshold:0.4});
+countEls.forEach(el=>countObs.observe(el));
+
+function submitEnquiry(){
+  const n = document.getElementById('fname').value.trim();
+  const m = document.getElementById('fmobile').value.trim();
+  const c = document.getElementById('fcity').value.trim();
+  const s = document.getElementById('fservice').value;
+  if(!n || !m || !c || !s){
+    alert('Please fill in all required fields marked with *.');
+    return;
+  }
+  document.getElementById('enquiryForm').style.display = 'none';
+  document.getElementById('formSuccess').classList.add('show');
+}
+</script>
+</body>
+</html>
